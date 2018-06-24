@@ -1,0 +1,197 @@
+@import './materialize';
+// importing materialize so we can use their variables
+
+$background-image: url(../img/office.png);
+$whiteish: #f6fafd;
+// $yellowish: #fbd201;
+$yellowish: #fedf42;
+$blueish: #0356a1;
+$flamingoish: #fa9598;
+$dark-grey: #323232;
+$light-grey: #ecf0f1;
+
+html,
+body {
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+.nav-background {
+  background-color: #fff !important;
+}
+
+.main-header {
+  background-image: $background-image;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  color: #000;
+  position: relative;
+}
+
+@media only screen and (max-width: 1050px) {
+  .main-header {
+    background-size: cover;
+  }
+}
+
+nav ul {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.scroll-icon {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+
+.section-about,
+.section-work {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.section-title {
+  background-color: $light-grey;
+  padding: 20px 0 30px 0;
+  margin-bottom: 50px;
+  border-top: 5px solid $dark-grey;
+  border-bottom: 5px solid $dark-grey;
+}
+
+.boxes {
+  margin-bottom: 50px;
+}
+
+.boxes h4 {
+  margin-bottom: 30px;
+}
+
+.section-work .section-title {
+  background-color: #fff;
+  padding: 20px 0 30px 0;
+  margin-bottom: 50px;
+  border-top: none;
+  border-bottom: none;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4 {
+  opacity: 0;
+  // opacity of 0 to begin with because we're fading them in with ScrollFire
+}
+
+.img-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 390px;
+}
+
+.section-work .work-projects {
+  margin-top: 50px;
+}
+
+.section-work .card-image {
+  padding: 40px 40px 0 40px;
+}
+
+.modal-content {
+  margin-top: 30px;
+}
+
+.modal-content img {
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+}
+
+blockquote {
+  border-left: 5px solid $flamingoish !important;
+}
+
+.btn-floating {
+  background-color: $yellowish;
+}
+
+.page-footer {
+  background-color: $flamingoish;
+}
+
+.input-field .prefix.active {
+  color: $yellowish !important;
+}
+
+input[type='email']:not(.browser-default),
+textarea.materialize-textarea {
+  border-bottom: 1px solid #fff !important;
+  box-shadow: 0 1px 0 0 #fff !important;
+}
+
+input[type='email']:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid $yellowish !important;
+  box-shadow: 0 1px 0 0 $yellowish !important;
+}
+
+.page-footer .divider {
+  margin-top: 20px;
+}
+
+.modal .modal-footer {
+  padding: 4px 0 !important;
+  width: 98% !important;
+  margin-left: 1%;
+}
+
+.line-on-sides {
+  display: inline-block;
+  position: relative;
+}
+
+.line-on-sides:before,
+.line-on-sides:after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid $dark-grey;
+  border-top: 1px solid $dark-grey;
+  top: 50%;
+  width: 150px;
+}
+
+@media only screen and (max-width: 767px) {
+  .line-on-sides:before,
+  .line-on-sides:after {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .line-on-sides:before,
+  .line-on-sides:after {
+    width: 80px;
+  }
+}
+
+.line-on-sides:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.line-on-sides:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.larger {
+  font-size: larger;
+}
